@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Trump Tweets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Free-Template.co" />
+    <link rel="shortcut icon" href="ftco-32x32.png">
+    
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='custom-bs.css')}}">
+
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='jquery.fancybox.min.css')}}">
+
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='cssbootstrap-select.min.css')}}">
+
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='fonts/icomoon/style.css')}}">
+
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='fonts/line-icons/style.css')}}">
+
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='css/owl.carousel.min.css')}}">
+
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='css/animate.min.css')}}">
+
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='style.css')}}">  
+  </head>
+  <body id="top">
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6">
+            {% if quote != '' %}
+                  <a class="text-white font-weight-bold">the tweet</a>
+                {%endif%}
+                 {% if quote == '' %}
+                   <a href="/" style="color:white;font-size:30px">home</a>
+                {%endif%}
+          </div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+             
+                </ul>
+              
+              
+          </nav>
+          
+         
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-color: #0b0f2d ;" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6">
+            <div class="mb- text-center">
+                {% if quote != '' %}
+                   <h1></h1>
+                   <blockquote class="twitter-tweet"  data-lang="en"><p lang="und" dir="ltr" style= "width:2000; margin-right: auto; margin-left: auto;">
+
+                    <a href="https://twitter.com/hashtag/CrookedHillary?src=hash&amp;ref_src=twsrc%5Etfw">#{{hashtag}}</a> 
+
+                    <a href="https://t.co/vXhcC8PaPy">{{media}}
+
+                    </p>&mdash; Donald J. Trump (@realDonaldTrump) <a href={{org_url}}>August 29, 2016</a>
+                    </blockquote>
+                    
+
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" align="center" width="550"></script>
+
+                {%endif%}
+                 {% if quote == '' %}
+                   <a href="/" style="color:white;font-size:50px">Get A Donald Trump Quote!</a>
+                {%endif%}
+                <h1></h1>
+
+                <a href="/history" style="color:white;font-size:35px">History</a>
+                <h1></h1>
+                <a href="/" style="color:white;font-size:35px">Get Another Quote!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+  </body>
+</html>
